@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/SIMPLICITY.png");
+  /* background-position:center; */
+  /* background-size: cover; */
+  background-size: 70px;
+  background-repeat: repeat;
+}
+.shop {
+  font-size: xx-large;
+}

@@ -1,0 +1,19 @@
+.card {
+  width: 300px;
+  height: 500px;
+}
+.products {
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#getThem {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
