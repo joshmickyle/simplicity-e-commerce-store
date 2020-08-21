@@ -11,6 +11,7 @@ import Nav from "./nav/Nav";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 import Cart from "./cart/Cart";
+import AddForm from "./products/AddForm";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/products" component={Products} />
           <Route path="/cart" component={Cart} />
+          <Route path="/addProduct" component={AddForm} />
         </Switch>
       </div>
     </Router>

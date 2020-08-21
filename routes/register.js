@@ -48,4 +48,14 @@ router.post("/", async (req, res) => {
   }
 });
 
+// get all the users
+router.get("/", async (req, res) => {
+  try {
+    const all = await User.find();
+    res.json(all);
+  } catch (err) {
+    res.json({ msg: err });
+  }
+});
+
 module.exports = router;

@@ -2,21 +2,29 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./Register.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { register, handleSubmit } = useForm();
 
+  const user = () => {
+    axios.get("/api/users").then((resp) => {
+      console.log(resp);
+    });
+  };
+
   const onSubmit = (data) => {
-    const user = {
+    const userr = {
       name: data.name,
       email: data.email,
       password: data.password,
     };
     console.log(data);
-
-    axios.post("api/users", user).then((res) => {
+    // send the user to databse
+    axios.post("/api/users", userr).then((res) => {
       console.log(data);
     });
+    //get the user
   };
 
   return (
@@ -25,7 +33,9 @@ const Register = () => {
         <div id="wrapper">
           <div className="main-content">
             <div className="header">
-              <h1>Simplicity Sign up</h1>
+              <div className="header img">
+                <p>Simplicity Sign up</p>
+              </div>
             </div>
             <div className="l-part">
               <input
@@ -42,7 +52,7 @@ const Register = () => {
                 name="email"
                 ref={register}
                 // required
-                className="input-1"
+                className="input1"
               />
               <div className="overlap-text">
                 <input
@@ -53,9 +63,16 @@ const Register = () => {
                   name="password"
                   className="input-2"
                 />
-                <a href="#">Forgot?</a>
               </div>
-              <input type="submit" value="Log in" className="btn" />
+              {/* <input
+                type="submit"
+                value="Sing Up"
+                className="btn"
+               
+              /> */}
+              <button className="btn red" type="submit">
+                sign up
+              </button>
             </div>
           </div>
         </div>

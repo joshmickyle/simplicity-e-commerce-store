@@ -9,7 +9,7 @@ function Nav() {
         <div className="nav-wrapper">
           <div className="left">
             <Link to="!#" className="brand-logo left hide-on-med-and-down ">
-              Logo
+              Simplicity
             </Link>
             <a
               to="#"

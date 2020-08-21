@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.home {
+.about {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -15,6 +15,6 @@
   background-size: 70px;
   background-repeat: repeat;
 }
-.shop {
+.about1 {
   font-size: xx-large;
 }
